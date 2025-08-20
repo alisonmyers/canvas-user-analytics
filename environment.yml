@@ -1,0 +1,20 @@
+name: canvas-user-analytics
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python-dotenv
+  - prettytable
+  - colorama
+  - pandas
+  - tqdm
+  - jupyter
+  - python>=3.7.0
+  - pip
+  - pip:
+      - canvasapi>= 2.0.0
+      - python-dotenv
+      - termcolor
+      - tabulate
+      - yaspin
+      - pick

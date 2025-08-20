@@ -1,0 +1,10 @@
+data/*
+course-details/data/*
+module-progress/data/*
+module-progress/status_log/*
+.env
+*.pyc
+__pycache__/*
+course_entitlements.csv
+module-progress/archive/*
+.DS_Store
