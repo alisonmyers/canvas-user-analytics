@@ -1,4 +1,5 @@
 data/*
+!data/.gitkeep
 course-details/data/*
 module-progress/data/*
 module-progress/status_log/*
