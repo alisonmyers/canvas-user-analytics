@@ -2,13 +2,13 @@ import pandas as pd
 from canvasapi import Canvas
 from IPython.display import display, HTML
 from datetime import datetime
-from interface import shut_down, print_success
-import helpers
+from cd_src.interface import shut_down, print_success
+import cd_src.helpers as helpers
 import os
 from pathlib import Path
-from mp_src.settings import COURSE_ID
-import mp_src.settings as settings
-import data_details
+from cd_src.settings import COURSE_ID
+import cd_src.settings as settings
+import cd_src.data_details as data_details
 
 """ Creates the initial course data which will be output in data/COURSE_ID/raw/api_output 
 and creates a new_analytics_input folder for user

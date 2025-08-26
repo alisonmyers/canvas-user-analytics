@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-import helpers
+import cd_src.helpers as helpers
 
 load_dotenv()
 COURSE_ID = helpers.get_course_code()

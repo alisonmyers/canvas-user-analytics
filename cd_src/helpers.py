@@ -2,7 +2,7 @@ from pathlib import Path
 import os
 from os import walk
 import re
-from interface import print_unexpected, print_success, shut_down
+from cd_src.interface import print_unexpected, print_success, shut_down
 from shutil import copyfile
 from yaspin import yaspin
 import pandas as pd

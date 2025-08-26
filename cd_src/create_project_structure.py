@@ -1,9 +1,9 @@
-from interface import print_success, shut_down
-from helpers import check_for_data
+from cd_src.interface import print_success, shut_down
+from cd_src.helpers import check_for_data
 import glob
 import pandas as pd
-from mp_src.settings import COURSE_ID
-import mp_src.settings as settings
+from cd_src.settings import COURSE_ID
+import cd_src.settings as settings
 
 from os import walk
 
