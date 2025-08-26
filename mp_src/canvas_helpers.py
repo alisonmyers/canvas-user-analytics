@@ -343,14 +343,16 @@ def write_tableau_directory(list_of_dfs):
     root = os.path.dirname(os.path.abspath(__file__))
 
     # Copy the course_entitlements.csv into the Tableau folder
-    src = Path(f"{root}/course_entitlements.csv")
-    dst = Path(f"{root}/data/module_progress-Tableau/course_entitlements.csv")
+    src = Path(f"course_entitlements.csv")
+    dst = Path(f"data/module_progress-Tableau/course_entitlements.csv")
+
+    print(f"Module Progress: {src}, {dst}")
     shutil.copyfile(src, dst)
 
     current_dt = datetime.datetime.now()
     dir_name = str(current_dt.strftime("%Y-%m-%d--%H-%M-%S"))
     src = tableau_path
-    dst = Path(f"{root}/archive/{dir_name}")
+    dst = Path(f"data/archive/{dir_name}")
     shutil.make_archive(dst, "zip", src)
     _output_status_table(tableau_path)
 
@@ -473,10 +475,14 @@ def _make_output_dir(name):
     Returns:
         String: path to the newly created directory
     """
-    root = os.path.dirname(os.path.abspath(__file__))
-    directory_path = Path(f"{root}/data/{name}")
+
+    
+    #root = os.path.dirname(os.path.abspath(__file__))
+    directory_path = Path(f"data/{name}")
+    print(f"Creating directory path...{directory_path}")
     # print(directory_path)
     if not os.path.exists(directory_path):
+        print(f"for the first time...")
         os.makedirs(directory_path)
     return directory_path
 

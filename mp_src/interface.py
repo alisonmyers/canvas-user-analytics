@@ -171,7 +171,7 @@ def __load_ids():
     cids = []
 
     try:
-        entitlements_path = Path(f"{settings.ROOT_DIR}/course_entitlements.csv")
+        entitlements_path = Path(f"course_entitlements.csv")
         dataframe = pd.read_csv(entitlements_path)
         for index, row in dataframe.iterrows():
             course_id = row["course_id"]
