@@ -5,7 +5,7 @@ import numpy as np
 import datetime
 import re
 import ast
-from settings import CLEANEDDATA_FOLDER, TABLEAU_FOLDER, INST_CODE
+from mp_src.settings import CLEANEDDATA_FOLDER, TABLEAU_FOLDER, INST_CODE
 from helpers import create_folder
 from interface import print_success
 

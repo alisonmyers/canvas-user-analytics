@@ -6,8 +6,8 @@ from interface import shut_down, print_success
 import helpers
 import os
 from pathlib import Path
-from settings import COURSE_ID
-import settings
+from mp_src.settings import COURSE_ID
+import mp_src.settings as settings
 import data_details
 
 """ Creates the initial course data which will be output in data/COURSE_ID/raw/api_output 

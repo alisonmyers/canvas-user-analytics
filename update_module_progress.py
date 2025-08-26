@@ -18,7 +18,7 @@ import sys
 from canvasapi.exceptions import Unauthorized
 import pandas as pd
 import mp_src.interface as interface
-import settings
+import mp_src.settings as settings
 from mp_src.canvas_helpers import (
     get_modules,
     get_items,
@@ -46,7 +46,7 @@ def main():
     tableau_dfs = []
 
     # clear any folders that are currently in there (leave tableau folder)
-    clear_data_directory()
+    # clear_data_directory()
 
     # Getting course information for user-specified courses
     # Loops through courses and tries to get module/item information and create Pandas Dataframes

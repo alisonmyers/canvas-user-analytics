@@ -15,7 +15,7 @@ import os
 import shutil
 from tqdm import tqdm
 import pandas as pd
-import settings
+import mp_src.settings as settings
 from pathlib import Path
 
 
@@ -335,16 +335,16 @@ def write_tableau_directory(list_of_dfs):
 
     Also creates a .zip with the contents of the Tableau folder in the 'archive' directory
     """
-    tableau_path = _make_output_dir("Tableau")
+    tableau_path = _make_output_dir("module_progress-Tableau")
     union = pd.concat(list_of_dfs, axis=0, ignore_index=True)
     module_data_output_path = tableau_path / "module_data.csv"
     union.to_csv(module_data_output_path, index=False)
 
-    root = os.path.dirname(os.path.abspath(__file__))[:-4]
+    root = os.path.dirname(os.path.abspath(__file__))
 
     # Copy the course_entitlements.csv into the Tableau folder
     src = Path(f"{root}/course_entitlements.csv")
-    dst = Path(f"{root}/data/Tableau/course_entitlements.csv")
+    dst = Path(f"{root}/data/module_progress-Tableau/course_entitlements.csv")
     shutil.copyfile(src, dst)
 
     current_dt = datetime.datetime.now()
@@ -371,9 +371,6 @@ def _output_status_table(tableau_path):
     dataframe = pd.DataFrame(data, columns=cols)
 
     file_name = str(current_dt.strftime("%Y-%m-%d--%H-%M-%S")) + ".csv"
-
-    status_log_path = Path(f"{settings.ROOT_DIR}/status_log/{file_name}")
-    dataframe.to_csv(status_log_path, index=False)
 
     status_path = tableau_path / "status.csv"
     dataframe.to_csv(status_path, index=False)
@@ -476,7 +473,7 @@ def _make_output_dir(name):
     Returns:
         String: path to the newly created directory
     """
-    root = os.path.dirname(os.path.abspath(__file__))[:-4]
+    root = os.path.dirname(os.path.abspath(__file__))
     directory_path = Path(f"{root}/data/{name}")
     # print(directory_path)
     if not os.path.exists(directory_path):

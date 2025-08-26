@@ -9,3 +9,5 @@ __pycache__/*
 course_entitlements.csv
 module-progress/archive/*
 .DS_Store
+mp_src/data/*
+mp_src/archive/*

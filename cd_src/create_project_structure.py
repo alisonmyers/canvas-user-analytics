@@ -2,8 +2,8 @@ from interface import print_success, shut_down
 from helpers import check_for_data
 import glob
 import pandas as pd
-from settings import COURSE_ID
-import settings
+from mp_src.settings import COURSE_ID
+import mp_src.settings as settings
 
 from os import walk
 
