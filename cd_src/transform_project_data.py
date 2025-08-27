@@ -16,10 +16,10 @@ def transform_data(detail_dict, drop_rest=False):
     out_file = f'{settings.CLEANEDDATA_FOLDER}/{file}.csv'
 
 
-    tem = sys.stdout
-    sys.stdout = f = open(f'{settings.CLEANDDATA_TRACKING_TRANSFORMATIONS}/{file}.md', 'w')
+    # tem = sys.stdout
+    # sys.stdout = f = open(f'{settings.CLEANDDATA_TRACKING_TRANSFORMATIONS}/{file}.md', 'w')
     
-    print(f'# {file}')
+    # print(f'# {file}')
     
     print(f'\nREADING: {in_file}\n')
     df = pd.read_csv(in_file)
@@ -30,10 +30,10 @@ def transform_data(detail_dict, drop_rest=False):
 
     print(f'\nWRITING: {out_file}.csv\n')
     df.to_csv(f'{out_file}', index=False)
-    data_dict[data_dict['change_note']!='deleted'].to_csv(f'{settings.CLEANDDATA_TRACKING_TRANSFORMATIONS}/{file}_schema.csv', index=False)
+    #data_dict[data_dict['change_note']!='deleted'].to_csv(f'{settings.CLEANDDATA_TRACKING_TRANSFORMATIONS}/{file}_schema.csv', index=False)
     
-    sys.stdout = tem
-    f.close()
+    # sys.stdout = tem
+    # f.close()
     
     return(df)
 
@@ -46,8 +46,8 @@ def transform_project_data_fn():
     transform_data(data_details.ASSIGNMENTS_DICT, True)
     transform_data(data_details.MODULEITEMS_DICT, True)
     transform_data(data_details.MODULES_DICT, True)
-    transform_data(data_details.PAGES_DICT, True)
-    transform_data(data_details.QUIZZES_DICT, True)
+#    transform_data(data_details.PAGES_DICT, True)
+#    transform_data(data_details.QUIZZES_DICT, True)
     transform_data(data_details.ASSIGNMENTSUBMISSIONS_DICT, True)
     transform_data(data_details.ENROLLMENTS_DICT, True)
     transform_data(data_details.NEWANALYTICS_NEW_DICT, True)

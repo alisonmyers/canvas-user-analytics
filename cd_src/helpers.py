@@ -215,7 +215,7 @@ def schema_rename_and_drop_columns(df, rename_dict, schema_file, drop_rest=False
         print(f"error finding data schema: {e}")
         pass
     
-    print(changed_cols_df.to_markdown())
+    #print(changed_cols_df.to_markdown())
     df.rename(rename_dict, axis=1, inplace=True)
     return(df, changed_cols_df)
     
