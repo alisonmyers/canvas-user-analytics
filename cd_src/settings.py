@@ -18,8 +18,8 @@ ORIGINALDATA_FOLDER = f'{PROJECT_FOLDER}/original_data'
 
 APIOUTPUT_FOLDER = f'{ORIGINALDATA_FOLDER}' 
 
-NEWANALYTICS_FOLDER = f'{RAW_FOLDER}/new_analytics_input'
-NEWANALYTICS_NEW_FOLDER = f'{RAW_FOLDER}/new_analytics_input_new'
+#NEWANALYTICS_FOLDER = f'{RAW_FOLDER}/new_analytics_input'
+NEWANALYTICS_NEW_FOLDER = f'{RAW_FOLDER}/new_analytics_input'
 GRADEBOOK_FOLDER = f'{RAW_FOLDER}/gradebook_input'
 
 SCHEMAS_FOLDER = 'schemas' #included in project

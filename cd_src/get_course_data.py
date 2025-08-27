@@ -41,14 +41,14 @@ def create_canvas_object():
 def get_course_data(course, output_folder):
 
     data_details.ENROLLMENTS_DICT = helpers.create_df_and_csv(course.get_enrollments(), data_details.ENROLLMENTS_DICT, output_folder)
-    data_details.FILES_DICT = helpers.create_df_and_csv(course.get_files(), data_details.FILES_DICT, output_folder)
+    #data_details.FILES_DICT = helpers.create_df_and_csv(course.get_files(), data_details.FILES_DICT, output_folder)
     #features_df = helpers.create_df_and_csv(course.get_features(), f'{output_path}/features')
-    data_details.PAGES_DICT= helpers.create_df_and_csv(course.get_pages(), data_details.PAGES_DICT, output_folder)
-    data_details.QUIZZES_DICT= helpers.create_df_and_csv(course.get_quizzes(), data_details.QUIZZES_DICT, output_folder)
+    #data_details.PAGES_DICT= helpers.create_df_and_csv(course.get_pages(), data_details.PAGES_DICT, output_folder)
+    #data_details.QUIZZES_DICT= helpers.create_df_and_csv(course.get_quizzes(), data_details.QUIZZES_DICT, output_folder)
     data_details.ASSIGNMENTS_DICT = helpers.create_df_and_csv(course.get_assignments(), data_details.ASSIGNMENTS_DICT, output_folder)
     #externaltools_df = helpers.create_df_and_csv(course.get_external_tools(), f'{output_path}/external_tools')
     #tabs_df = helpers.create_df_and_csv(course.get_tabs() , f'{output_path}/tabs')
-    data_details.DISCUSSIONTOPICS_DICT = helpers.create_df_and_csv(course.get_discussion_topics(), data_details.DISCUSSIONTOPICS_DICT, output_folder)
+    #data_details.DISCUSSIONTOPICS_DICT = helpers.create_df_and_csv(course.get_discussion_topics(), data_details.DISCUSSIONTOPICS_DICT, output_folder)
     data_details.ASSIGNMENTSUBMISSIONS_DICT = helpers.create_df_and_csv(course.get_multiple_submissions(student_ids='all'), data_details.ASSIGNMENTSUBMISSIONS_DICT, output_folder)
     
 
@@ -69,7 +69,7 @@ def create_course_output():
     course = canvas.get_course(COURSE_ID)
     
     helpers.create_folder(settings.APIOUTPUT_FOLDER)
-    helpers.create_folder(settings.NEWANALYTICS_FOLDER)
+    helpers.create_folder(settings.NEWANALYTICS_NEW_FOLDER)
     helpers.create_folder(settings.GRADEBOOK_FOLDER) 
 
     get_course_data(course, settings.APIOUTPUT_FOLDER)

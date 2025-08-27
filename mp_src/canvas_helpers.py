@@ -340,8 +340,6 @@ def write_tableau_directory(list_of_dfs):
     module_data_output_path = tableau_path / "module_data.csv"
     union.to_csv(module_data_output_path, index=False)
 
-    root = os.path.dirname(os.path.abspath(__file__))
-
     # Copy the course_entitlements.csv into the Tableau folder
     src = Path(f"course_entitlements.csv")
     dst = Path(f"data/module_progress-Tableau/course_entitlements.csv")
@@ -349,11 +347,11 @@ def write_tableau_directory(list_of_dfs):
     print(f"Module Progress: {src}, {dst}")
     shutil.copyfile(src, dst)
 
-    current_dt = datetime.datetime.now()
-    dir_name = str(current_dt.strftime("%Y-%m-%d--%H-%M-%S"))
-    src = tableau_path
-    dst = Path(f"data/archive/{dir_name}")
-    shutil.make_archive(dst, "zip", src)
+    #current_dt = datetime.datetime.now()
+    #dir_name = str(current_dt.strftime("%Y-%m-%d--%H-%M-%S"))
+    # src = tableau_path
+    # dst = Path(f"data/archive/{dir_name}")
+    # shutil.make_archive(dst, "zip", src)
     _output_status_table(tableau_path)
 
 

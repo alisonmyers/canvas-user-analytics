@@ -50,7 +50,6 @@ def transform_project_data_fn():
     transform_data(data_details.QUIZZES_DICT, True)
     transform_data(data_details.ASSIGNMENTSUBMISSIONS_DICT, True)
     transform_data(data_details.ENROLLMENTS_DICT, True)
-    #transform_data(data_details.NEWANALYTICS_DICT, True)
     transform_data(data_details.NEWANALYTICS_NEW_DICT, True)
     transform_data(data_details.GRADEBOOKUSERDATA_DICT, True)
 
