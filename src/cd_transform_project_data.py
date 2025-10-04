@@ -1,8 +1,8 @@
 import pandas as pd
 import sys
-from src.helpers import create_folder, schema_rename_and_drop_columns
-import src.settings as settings
-from . import data_details
+from .helpers import create_folder, schema_rename_and_drop_columns
+from . import settings
+from . import cd_data_details
 
 
 
@@ -43,15 +43,15 @@ def transform_project_data_fn():
     create_folder(settings.CLEANEDDATA_FOLDER)
     create_folder(settings.CLEANDDATA_TRACKING_TRANSFORMATIONS)
 
-    transform_data(data_details.ASSIGNMENTS_DICT, True)
-    transform_data(data_details.MODULEITEMS_DICT, True)
-    transform_data(data_details.MODULES_DICT, True)
+    transform_data(cd_data_details.ASSIGNMENTS_DICT, True)
+    transform_data(cd_data_details.MODULEITEMS_DICT, True)
+    transform_data(cd_data_details.MODULES_DICT, True)
 #    transform_data(data_details.PAGES_DICT, True)
 #    transform_data(data_details.QUIZZES_DICT, True)
-    transform_data(data_details.ASSIGNMENTSUBMISSIONS_DICT, True)
-    transform_data(data_details.ENROLLMENTS_DICT, True)
-    transform_data(data_details.NEWANALYTICS_NEW_DICT, True)
-    transform_data(data_details.GRADEBOOKUSERDATA_DICT, True)
+    transform_data(cd_data_details.ASSIGNMENTSUBMISSIONS_DICT, True)
+    transform_data(cd_data_details.ENROLLMENTS_DICT, True)
+    transform_data(cd_data_details.NEWANALYTICS_NEW_DICT, True)
+    transform_data(cd_data_details.GRADEBOOKUSERDATA_DICT, True)
 
 if __name__ == "__main__":
     transform_project_data_fn()

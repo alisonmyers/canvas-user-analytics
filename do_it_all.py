@@ -1,12 +1,12 @@
 
-from cd_src.check_for_downloads import check_for_canvas_downloads
-from cd_src.get_course_data import create_course_output
+from src.cd_check_for_downloads import check_for_canvas_downloads
+from src.cd_get_course_data import create_course_output
 from src.interface import confirm_strict
 from src.utils import print_success, shut_down
 import src.settings as settings
 from src.settings import COURSE_ID
-from cd_src.transform_project_data import transform_project_data_fn
-from cd_src.transform_for_tableau import transform_for_tableau_fn
+from src.cd_transform_project_data import transform_project_data_fn
+from src.cd_transform_for_tableau import transform_for_tableau_fn
 
 
 def do_it_all():

@@ -1,9 +1,9 @@
-from src.utils import print_success, shut_down
-from src.helpers import check_for_data
+from .utils import print_success, shut_down
+from .helpers import check_for_data
 import glob
 import pandas as pd
-from src.settings import COURSE_ID
-import src.settings as settings
+from .settings import COURSE_ID
+from . import settings
 
 from os import walk
 
