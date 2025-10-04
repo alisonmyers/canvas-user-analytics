@@ -52,6 +52,7 @@ def main():
     # Loops through courses and tries to get module/item information and create Pandas Dataframes
     # Writes dataframes to disk if successful
     # Prints error and skips course if unsuccessful
+
     for cid in course_ids:
         course = canvas.get_course(cid)
         # Calling helpers to get data from Canvas and build Pandas DataFrame's

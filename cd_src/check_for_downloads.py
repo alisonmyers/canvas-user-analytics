@@ -1,9 +1,9 @@
-from cd_src.interface import print_success, shut_down
-from cd_src.helpers import check_for_data
+from interface import print_success, shut_down
+from helpers import check_for_data
 import glob
 import pandas as pd
-from cd_src.settings import COURSE_ID
-import cd_src.settings as settings
+from settings import COURSE_ID
+import settings as settings
 
 from os import walk
 
@@ -13,7 +13,7 @@ and reorganize data as appropriate.
 """
         
 # create folder called project_data
-def create_project_structure():
+def check_for_canvas_downloads():
     
     if check_for_data(settings.DATA_FOLDER):
         print_success(f'DATA FOLDER FOUND {settings.DATA_FOLDER}\n')
@@ -57,7 +57,7 @@ def create_project_structure():
 
 
 if __name__ == "__main__":
-    create_project_structure()
+    check_for_canvas_downloads()
 
     # if there is data in new_analytics_input
     # check that all files follow the same structure (column names)

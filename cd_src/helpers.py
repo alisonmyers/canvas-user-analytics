@@ -2,14 +2,37 @@ from pathlib import Path
 import os
 from os import walk
 import re
-from cd_src.interface import print_unexpected, print_success, shut_down
+from interface import print_unexpected, print_success, shut_down
 from shutil import copyfile
 from yaspin import yaspin
 import pandas as pd
 import json
+from canvasapi import Canvas
 
 
+def create_canvas_object(): 
+    try:
+        url = os.getenv('API_URL')
+        token = os.getenv('API_TOKEN')
+        auth_header = {'Authorization': f'Bearer {token}'}
+        canvas = Canvas(url, token)
 
+
+        try:
+            user = canvas.get_user('self')
+            print_success(f'\nHello, {user.name}!')
+        except Exception as e:
+            shut_down(
+                """
+                ERROR: could not get user from server.
+                Please ensure token is correct and valid and ensure using the correct instance url.
+                """
+            )
+        return(canvas, auth_header)
+        
+    except Exception as e:
+        shut_down(f'{e}: Canvas object not created')
+        return(False)  
 def get_course_code():
     try:
         COURSE_ID = os.getenv('COURSE_ID')
