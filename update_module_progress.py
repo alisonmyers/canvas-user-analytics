@@ -19,16 +19,14 @@ from canvasapi.exceptions import Unauthorized
 import pandas as pd
 import src.interface as interface
 import src.settings as settings
-from src.helpers import (
+from src.canvas_helpers import (
     get_modules,
     get_items,
     get_student_module_status,
     get_student_items_status,
-    write_data_directory,
-    write_tableau_directory,
-    log_success,
-    log_failure,
 )
+from src.file_utils import (write_data_directory, write_tableau_directory)
+from src.logging_utils import (log_success, log_failure)
 
 pd.set_option("display.max_columns", 500)
 
@@ -43,9 +41,6 @@ def main():
     course_ids = usr_settings["course_ids"]
     canvas = usr_settings["canvas"]
     tableau_dfs = []
-
-    # clear any folders that are currently in there (leave tableau folder)
-    # clear_data_directory()
 
     # Getting course information for user-specified courses
     # Loops through courses and tries to get module/item information and create Pandas Dataframes

@@ -1,5 +1,5 @@
 from .utils import print_success, shut_down
-from .helpers import check_for_data
+from .file_utils import check_for_data
 import glob
 import pandas as pd
 from .settings import COURSE_ID

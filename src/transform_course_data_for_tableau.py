@@ -4,7 +4,7 @@ import datetime
 import re
 import ast
 from .settings import CLEANEDDATA_FOLDER, TABLEAU_FOLDER, INST_CODE
-from .helpers import create_folder
+from .file_utils import create_folder
 from .utils import print_success
 
 def _extract_file_type(somestring):

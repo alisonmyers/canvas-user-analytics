@@ -21,7 +21,7 @@ from colorama import init
 init()
 
 from . import settings
-from .helpers import log_failure
+from .logging_utils import log_failure
 from .utils import shut_down
 
 ### MODULE PROGRESS
