@@ -11,7 +11,7 @@ This tool is meant to enhance the data available from Canvas's [module progress 
 - Create a file called `.env` in the ROOT folder with the following fields:
 
   ```
-  CANVAS_API_TOKEN =  # paste your personal token here
+  API_TOKEN =  # paste your personal token here
   ```
 
 - install environment using [Conda](https://docs.conda.io/en/latest/)

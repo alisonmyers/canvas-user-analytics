@@ -154,7 +154,7 @@ def __load_token(url):
             "Ensure .env file is in root directory with token filled in for variable corresponding to given instance"
         )
         __shut_down(
-            "Possible variable keys are: CANVAS_API_TOKEN, CANVAS_API_TOKEN_TEST, CANVAS_API_TOKEN_SANDBOX"
+            "Possible variable keys are: API_TOKEN, API_TOKEN_TEST, API_TOKEN_SANDBOX"
         )
 
     return token
@@ -230,13 +230,13 @@ def __read_token(url):
     dotenv.load_dotenv(dotenv.find_dotenv(".env"))
 
     if url == "https://canvas.ubc.ca":
-        token = os.environ.get("CANVAS_API_TOKEN")
+        token = os.environ.get("API_TOKEN")
 
     # if url == 'https://ubc.test.instructure.com':
-    #     token = os.environ.get('CANVAS_API_TOKEN_TEST')
+    #     token = os.environ.get('API_TOKEN_TEST')
 
     # if url == 'https://ubcsandbox.instructure.com':
-    #     token = os.environ.get('CANVAS_API_TOKEN_SANDBOX')
+    #     token = os.environ.get('API_TOKEN_SANDBOX')
 
     if token == "":
         raise InvalidAccessToken("No token value.")
