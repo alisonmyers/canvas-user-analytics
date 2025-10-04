@@ -1,15 +1,14 @@
-
 from dotenv import load_dotenv
-import helpers 
+from .environment_variables import get_course_code
 # import os
 
 load_dotenv()
-COURSE_ID = helpers.get_course_code()
+COURSE_ID = get_course_code()
 
 ## MODULE PROGRESS 
 ## TODO IS THIS BROKEN? OR NEEDED?
 
-# status = {}
+status = {}
 # ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 INST_CODE = 112240000000000000 # WORKS FOR UBC

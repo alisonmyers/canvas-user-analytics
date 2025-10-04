@@ -6,10 +6,10 @@ import os
 import shutil
 from tqdm import tqdm
 import pandas as pd
-import settings as settings
+from . import settings
 from pathlib import Path
 from os import walk
-from interface import print_unexpected, print_success, shut_down
+from .utils import print_unexpected, print_success, shut_down
 from shutil import copyfile
 from yaspin import yaspin
 import json
@@ -610,15 +610,7 @@ def create_canvas_object():
     except Exception as e:
         shut_down(f'{e}: Canvas object not created')
         return(False)  
-def get_course_code():
-    try:
-        COURSE_ID = os.getenv('COURSE_ID')
-        if COURSE_ID == None:
-            shut_down('No course ID set, ensure you set it in .env')
-        else:
-            return(COURSE_ID)
-    except Exception:
-        shut_down('There was a problem with the .env file. Is there one?')
+
 
 def create_folder(folder_path):
     Path(folder_path).mkdir(parents=True, exist_ok=True)

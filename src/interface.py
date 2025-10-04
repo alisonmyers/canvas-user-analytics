@@ -14,13 +14,15 @@ from canvasapi.exceptions import InvalidAccessToken, ResourceDoesNotExist, Unaut
 from pick import pick
 from prettytable import PrettyTable
 from pathlib import Path
+from termcolor import colored
 
 from colorama import init
 
 init()
 
-import settings as settings
-from src.helpers import log_failure
+from . import settings
+from .helpers import log_failure
+from .utils import shut_down
 
 ### MODULE PROGRESS
 
@@ -254,3 +256,20 @@ def __shut_down(msg):
     print(msg)
     print("Shutting down...")
     sys.exit()
+
+def confirm_strict(msg, to_return=None):
+
+    while True:
+        confirm = input(colored(f'{msg} [Y/N]: \n', 'blue'))
+        confirm_upper = confirm.upper()
+        
+        if confirm_upper not in ('Y', "N"): 
+            print('Invalid entry, please enter Y or N')
+            continue
+        
+        else:
+            if confirm_upper == 'Y':
+                return(to_return)
+            elif confirm_upper == 'N':
+                shut_down('Exiting...')
+            break

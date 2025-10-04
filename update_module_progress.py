@@ -17,8 +17,8 @@ print(sys.executable)
 import sys
 from canvasapi.exceptions import Unauthorized
 import pandas as pd
-import mp_src.interface as interface
-import mp_src.settings as settings
+import src.interface as interface
+import src.settings as settings
 from src.helpers import (
     get_modules,
     get_items,

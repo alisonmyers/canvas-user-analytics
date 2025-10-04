@@ -1,9 +1,9 @@
-from interface import print_success, shut_down
+from src.utils import print_success, shut_down
 from src.helpers import check_for_data
 import glob
 import pandas as pd
-from settings import COURSE_ID
-import settings as settings
+from src.settings import COURSE_ID
+import src.settings as settings
 
 from os import walk
 
