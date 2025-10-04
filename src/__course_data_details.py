@@ -1,4 +1,4 @@
-# Dictionaries - for data cleaning once downloaded (see transform_project_data.py)
+# Dictionaries - for data cleaning once downloaded
 ASSIGNMENTS_DICT = {
     "name": "assignments",
     "rename_dict": {    

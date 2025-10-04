@@ -13,7 +13,7 @@ and reorganize data as appropriate.
 """
         
 # create folder called project_data
-def check_for_canvas_downloads():
+def check_for_user_input_files():
     
     if check_for_data(settings.DATA_FOLDER):
         print_success(f'DATA FOLDER FOUND {settings.DATA_FOLDER}\n')
@@ -57,7 +57,7 @@ def check_for_canvas_downloads():
 
 
 if __name__ == "__main__":
-    check_for_canvas_downloads()
+    check_for_user_input_files()
 
     # if there is data in new_analytics_input
     # check that all files follow the same structure (column names)

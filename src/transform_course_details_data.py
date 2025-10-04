@@ -2,7 +2,7 @@ import pandas as pd
 import sys
 from .helpers import create_folder
 from . import settings
-from . import cd_data_details
+from . import __course_data_details
 from .helpers import clean_columns_from_rename_dict
 
 
@@ -27,17 +27,17 @@ def transform_data(detail_dict, drop_rest=False):
 
 # MOST OF THESE FOLDERS NEED TO CHANGE
 
-def transform_project_data_fn():
+def transform_course_data():
     create_folder(settings.CLEANEDDATA_FOLDER)
     #create_folder(settings.CLEANDDATA_TRACKING_TRANSFORMATIONS)
 
-    transform_data(cd_data_details.ASSIGNMENTS_DICT, True)
-    transform_data(cd_data_details.MODULEITEMS_DICT, True)
-    transform_data(cd_data_details.MODULES_DICT, True)
-    transform_data(cd_data_details.ASSIGNMENTSUBMISSIONS_DICT, True)
-    transform_data(cd_data_details.ENROLLMENTS_DICT, True) 
-    transform_data(cd_data_details.NEWANALYTICS_NEW_DICT, True)
-    transform_data(cd_data_details.GRADEBOOKUSERDATA_DICT, True)
+    transform_data(__course_data_details.ASSIGNMENTS_DICT, True)
+    transform_data(__course_data_details.MODULEITEMS_DICT, True)
+    transform_data(__course_data_details.MODULES_DICT, True)
+    transform_data(__course_data_details.ASSIGNMENTSUBMISSIONS_DICT, True)
+    transform_data(__course_data_details.ENROLLMENTS_DICT, True) 
+    transform_data(__course_data_details.NEWANALYTICS_NEW_DICT, True)
+    transform_data(__course_data_details.GRADEBOOKUSERDATA_DICT, True)
 
 if __name__ == "__main__":
-    transform_project_data_fn()
+    transform_course_data()

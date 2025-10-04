@@ -1,21 +1,21 @@
 
-from src.cd_check_for_downloads import check_for_canvas_downloads
-from src.cd_get_course_data import create_course_output
+from src.check_for_user_inputs import check_for_user_input_files
+from src.get_course_details_data import create_course_data
 from src.interface import confirm_strict
 from src.utils import print_success, shut_down
 import src.settings as settings
 from src.settings import COURSE_ID
-from src.cd_transform_project_data import transform_project_data_fn
-from src.cd_transform_for_tableau import transform_for_tableau_fn
+from src.transform_course_details_data import transform_course_data
+from src.transform_course_data_for_tableau import transform_course_data_for_tableau
 
 
 def do_it_all():
-    create_course_output()
+    create_course_data()
     confirm_strict(f"Please add any New Analytics downloads to {settings.NEWANALYTICS_NEW_FOLDER}. Confirm when complete enter [Y] or exit [N].")
     confirm_strict(f"Please add your Gradebook export to {settings.GRADEBOOK_FOLDER}. Confirm when complete enter [Y] or exit [N].")
-    check_for_canvas_downloads()
-    transform_project_data_fn()
-    transform_for_tableau_fn()
+    check_for_user_input_files()
+    transform_course_data()
+    transform_course_data_for_tableau()
     print_success("Done!")
 
 if __name__ == "__main__":
