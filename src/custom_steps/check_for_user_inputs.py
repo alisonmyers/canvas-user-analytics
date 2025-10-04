@@ -1,9 +1,9 @@
-from .utils import print_success, shut_down
-from .file_utils import check_for_data
+from ..utils import print_success, shut_down
+from ..file_utils import check_for_data
 import glob
 import pandas as pd
-from .settings import COURSE_ID
-from . import settings
+from ..settings import COURSE_ID
+from .. import settings
 
 """ 
 Once data collected, this script will create a "project_folder"

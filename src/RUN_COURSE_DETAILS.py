@@ -1,12 +1,12 @@
 
-from src.check_for_user_inputs import check_for_user_input_files
-from src.get_course_details_data import create_course_data
+from src.custom_steps.check_for_user_inputs import check_for_user_input_files
+from src.custom_steps.get_course_details_data import create_course_data
 from src.interface import confirm_strict
 from src.utils import print_success
 import src.settings as settings
 from src.settings import COURSE_ID
-from src.transform_course_details_data import transform_course_data
-from src.transform_course_data_for_tableau import transform_course_data_for_tableau
+from src.custom_steps.transform_course_details_data import transform_course_data
+from src.custom_steps.transform_course_data_for_tableau import transform_course_data_for_tableau
 
 def do_it_all():
     create_course_data()
