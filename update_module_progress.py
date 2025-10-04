@@ -19,7 +19,7 @@ from canvasapi.exceptions import Unauthorized
 import pandas as pd
 import mp_src.interface as interface
 import mp_src.settings as settings
-from mp_src.helpers import (
+from src.helpers import (
     get_modules,
     get_items,
     get_student_module_status,

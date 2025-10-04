@@ -6,7 +6,7 @@ import datetime
 import re
 import ast
 from settings import CLEANEDDATA_FOLDER, TABLEAU_FOLDER, INST_CODE
-from helpers import create_folder
+from src.helpers import create_folder
 from interface import print_success
 
 def _extract_file_type(somestring):

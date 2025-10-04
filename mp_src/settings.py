@@ -5,7 +5,7 @@ Declares several global variables that are used throughout the project.
 * ROOT_DIR is the filepath to the src folder
 
 """
-import os
+# import os
 
-status = {}
-ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+# status = {}
+# ROOT_DIR = os.path.dirname(os.path.abspath(__file__))

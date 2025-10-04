@@ -1,6 +1,6 @@
 import pandas as pd
 import sys
-from helpers import create_folder, schema_rename_and_drop_columns
+from src.helpers import create_folder, schema_rename_and_drop_columns
 import settings as settings
 import data_details as data_details
 
