@@ -20,7 +20,7 @@ from colorama import init
 init()
 
 import settings as settings
-from canvas_helpers import log_failure
+from mp_src.helpers import log_failure
 
 # CANVAS_INSTANCES = ['https://canvas.ubc.ca',
 #                     'https://ubc.test.instructure.com',
