@@ -5,8 +5,6 @@ import pandas as pd
 from .settings import COURSE_ID
 from . import settings
 
-from os import walk
-
 """ 
 Once data collected, this script will create a "project_folder"
 and reorganize data as appropriate. 

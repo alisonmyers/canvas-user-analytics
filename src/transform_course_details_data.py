@@ -1,11 +1,8 @@
 import pandas as pd
-import sys
 from .helpers import create_folder
 from . import settings
 from . import special_course_details
 from .helpers import clean_columns_from_rename_dict
-
-
 
 def transform_data(detail_dict, drop_rest=False):
     # TODO ADD DATE TO FILE AS HEADER

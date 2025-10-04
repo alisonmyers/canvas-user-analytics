@@ -1,12 +1,7 @@
-import pandas as pd
 from .helpers import create_canvas_object
 from . import helpers 
 from . import settings
-from IPython.display import display, HTML
-from datetime import datetime
-from .utils import shut_down, print_success
-import os
-from pathlib import Path
+from .utils import print_success
 from .settings import COURSE_ID
 from . import special_course_details
 

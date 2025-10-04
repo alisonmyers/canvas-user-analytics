@@ -25,7 +25,6 @@ from src.helpers import (
     get_student_module_status,
     get_student_items_status,
     write_data_directory,
-    clear_data_directory,
     write_tableau_directory,
     log_success,
     log_failure,
