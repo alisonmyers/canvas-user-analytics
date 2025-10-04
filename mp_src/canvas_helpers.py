@@ -15,7 +15,7 @@ import os
 import shutil
 from tqdm import tqdm
 import pandas as pd
-import mp_src.settings as settings
+import settings as settings
 from pathlib import Path
 
 

@@ -19,8 +19,8 @@ from colorama import init
 
 init()
 
-import mp_src.settings as settings
-from mp_src.canvas_helpers import log_failure
+import settings as settings
+from canvas_helpers import log_failure
 
 # CANVAS_INSTANCES = ['https://canvas.ubc.ca',
 #                     'https://ubc.test.instructure.com',

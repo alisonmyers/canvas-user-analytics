@@ -20,8 +20,6 @@ def get_course_data(course, output_folder):
     data_details.ASSIGNMENTS_DICT = helpers.create_df_and_csv(course.get_assignments(), data_details.ASSIGNMENTS_DICT, output_folder)
     data_details.ASSIGNMENTSUBMISSIONS_DICT = helpers.create_df_and_csv(course.get_multiple_submissions(student_ids='all'), data_details.ASSIGNMENTSUBMISSIONS_DICT, output_folder)
     
-
-    # discussion topics, entries and replies
     #modules and module items
     data_details.MODULES_DICT = helpers.create_df_and_csv(course.get_modules(), data_details.MODULES_DICT, output_folder)
     data_details.MODULEITEMS_DICT = helpers.create_df_and_csv(course.get_modules(), data_details.MODULEITEMS_DICT, output_folder, "get_module_items")
