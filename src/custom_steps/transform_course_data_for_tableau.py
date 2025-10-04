@@ -26,10 +26,14 @@ def _parse_date_time(str):
     except:
         pass
 
-def combine_course_structure():
+def combine_course_structure(module_items=None, modules=None):
 
-    module_items = pd.read_csv(f'{CLEANEDDATA_FOLDER}/module_items.csv')
-    modules = pd.read_csv(f'{CLEANEDDATA_FOLDER}/modules.csv')
+    if module_items == None:
+        module_items = pd.read_csv(f'{CLEANEDDATA_FOLDER}/module_items.csv')
+
+    if modules == None:
+        modules = pd.read_csv(f'{CLEANEDDATA_FOLDER}/modules.csv')
+
     modules_and_items = module_items.merge(modules, on=["course_id", "module_id"])
     modules_and_items['item_order'] = modules_and_items.apply(lambda x: x['module_position'] 
                                                             + x['module_item_position']/100, axis=1)
@@ -130,10 +134,7 @@ def transform_course_data_for_tableau():
 
     create_folder(TABLEAU_FOLDER)
     
-    combine_course_structure()
-    print("Create New Analytics ... og")
-    #stud_analytics = combine_enrollment_and_new_analytics()
-    print("Create new analytics ... new")
+    combine_course_structure() # right now this just creates outputs 
     stud_analytics_new = combine_enrollment_and_new_analytics_new()
 
     merged_analytics = stud_analytics_new
