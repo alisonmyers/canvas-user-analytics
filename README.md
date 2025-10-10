@@ -102,7 +102,7 @@ source .venv/bin/activate
 
 6. Run the script
 ```bash
-python3 -m run_data_update
+python3 -m run
 ```
 
 - Watch the messages in the terminal and look for any action steps (blue/white)
