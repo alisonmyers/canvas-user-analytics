@@ -31,8 +31,15 @@ You can now open the project folder in VSCode! (Open folder)
 
 *Alternate: you can clone the github repo to keep the project in sync.*
 
-
 ## Environment Setup
+
+1. Create a new Virtual Environment
+
+```bash
+python3 -m venv .venv
+```
+
+## .env Setup
 > You'll typically do this once, but you may need to update the COURSE_ID in the file once saved if using for multiple courses.
 
 - Create a file called `.env` in the `canvas-user-analytics` folder with the following fields:
@@ -46,9 +53,6 @@ You can now open the project folder in VSCode! (Open folder)
 
 How to get a Canvas API Token: https://community.canvaslms.com/t5/Canvas-Basics-Guide/How-do-I-manage-API-access-tokens-in-my-user-account/ta-p/615312
 
-- in VSCode, open the terminal window and install the environment:
-
-  `$ conda env create -f environment.yml`
 
 ## Updating Data / Running the Script
 

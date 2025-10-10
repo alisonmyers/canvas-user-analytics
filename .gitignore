@@ -11,3 +11,5 @@ module-progress/archive/*
 .DS_Store
 mp_src/data/*
 mp_src/archive/*
+.venv/*
+.venv

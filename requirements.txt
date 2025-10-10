@@ -1,0 +1,18 @@
+# Core dependencies
+python-dotenv
+prettytable
+colorama
+pandas
+tqdm
+jupyter
+
+# Version requirement for Python
+# (informational only, can't enforce in requirements.txt)
+# python>=3.7.0
+
+# Extra pip dependencies
+canvasapi>=2.0.0
+termcolor
+tabulate
+yaspin
+pick
