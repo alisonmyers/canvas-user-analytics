@@ -12,22 +12,22 @@ The project is a hybrid of Canvas Module Progress and Course Details projects. I
 
 Open VS Code, and open a new terminal:
 
-![alt text](README/vscode-new-terminal.png)
+![alt text](img/vscode-new-terminal.png)
 
 in the following steps you'll use the terminal in VSCode
 
-![alt text](README/vscode-terminal.png)
+![alt text](img/vscode-terminal.png)
 
 1. Homebrew: https://brew.sh/
 1. Follow homebrew instructions to install `Git`: https://git-scm.com/downloads/mac
 
 1. Download a copy of this project either via Zip or clone
 
-![alt text](README/github-clone.png)
+![alt text](img/github-clone.png)
 
 You can now open the project folder in VSCode! (Open folder)
 
-![alt text](README/vscode-open-folder.png)
+![alt text](img/vscode-open-folder.png)
 
 *Alternate: you can clone the github repo to keep the project in sync.*
 
@@ -46,7 +46,7 @@ source .venv/bin/activate
 ```
 You'll see in brackets that the terminal is now using the environment
 
-![alt text](README/venv-example.png)
+![alt text](img/venv-example.png)
 
 3. Install the requirements.txt (downloads packages needed to run the scripts)
 
@@ -76,7 +76,7 @@ pip install -r requirements.txt
 How to get a Canvas API Token: https://community.canvaslms.com/t5/Canvas-Basics-Guide/How-do-I-manage-API-access-tokens-in-my-user-account/ta-p/615312
 
 
-## Updating Data / Running the Script
+## Updating Data / Running the Script - You'll do this every time.
 
 ### Downloading New Analytics
 
