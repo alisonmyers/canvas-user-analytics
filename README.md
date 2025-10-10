@@ -32,12 +32,34 @@ You can now open the project folder in VSCode! (Open folder)
 *Alternate: you can clone the github repo to keep the project in sync.*
 
 ## Environment Setup
+In terminal - enter the following commands:
 
 1. Create a new Virtual Environment
 
 ```bash
 python3 -m venv .venv
 ```
+
+2. Activate the environment
+```bash
+source .venv/bin/activate
+```
+You'll see in brackets that the terminal is now using the environment
+
+![alt text](README/venv-example.png)
+
+3. Install the requirements.txt (downloads packages needed to run the scripts)
+
+a) 
+```bash
+pip install --upgrade pip
+```
+
+b)
+```bash
+pip install -r requirements.txt
+```
+
 
 ## .env Setup
 > You'll typically do this once, but you may need to update the COURSE_ID in the file once saved if using for multiple courses.
@@ -67,12 +89,24 @@ The project relies on a regular download of Canvas's Analytics data. On a regula
 
 3. Save this activity file in `data/{COURSE_ID}/user_input/new_analytics_input/`
 
-- Open the project folder canvas-user-analytics
+4. In VS Code: Open the project folder canvas-user-analytics
   - Check that terminal is mirroring the folder name `canvas-user-analytics`
-- Open terminal and navigate to project ROOT directory
-- Activate the environment: `ACTIVATE`
-- Run the script: `python -m run_data_update`
-- Wait for script to finish and print table to console. 
+
+5. Activate the environment (if it is not active already)
+
+```bash
+source .venv/bin/activate
+```
+
+![alt text](README/image.png)
+
+6. Run the script
+```bash
+python3 -m run_data_update
+```
+
+- Watch the messages in the terminal and look for any action steps (blue/white)
+  
 - You will see 2 input steps you must confirm: that Canvas Analytics data has been added, and that Gradebook data has been added
 - Review the printed output and ensure necessary courses have completed successfully. If a course fails, error messages will provide info about what went wrong.
 
