@@ -1,9 +1,9 @@
 from dotenv import load_dotenv
-from .environment_variables import get_course_code
+from .environment_variables import get_course_id
 # import os
 
 load_dotenv()
-COURSE_ID = get_course_code()
+COURSE_ID = get_course_id()
 
 ## MODULE PROGRESS 
 ## TODO IS THIS BROKEN? OR NEEDED?

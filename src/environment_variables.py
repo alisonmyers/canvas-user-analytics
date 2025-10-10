@@ -1,7 +1,7 @@
 from .utils import shut_down
 import os 
 
-def get_course_code():
+def get_course_id():
     try:
         COURSE_ID = os.getenv('COURSE_ID')
         if COURSE_ID == None:

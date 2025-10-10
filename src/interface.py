@@ -23,6 +23,7 @@ init()
 from . import settings
 from .logging_utils import log_failure
 from .utils import shut_down
+from .settings import COURSE_ID
 
 ### MODULE PROGRESS
 
@@ -58,7 +59,7 @@ def get_user_settings():
 
     canvas = Canvas(base_url, token)
     auth_header = {"Authorization": "Bearer " + token}
-    course_ids = __load_ids()
+    course_ids = [COURSE_ID] #__load_ids()
     courses = []
     valid_cids = []
     for cid in course_ids:

@@ -8,9 +8,10 @@ from pathlib import Path
 import pandas as pd
 from shutil import copyfile
 
-from .settings import status
+from .settings import status, COURSE_ID
 from .logging_utils import _output_status_table
 from .utils import print_success, print_unexpected
+
 
 def create_folder(folder_path):
     Path(folder_path).mkdir(parents=True, exist_ok=True)
@@ -56,15 +57,15 @@ def write_data_directory(dataframes, cid):
         dataframe.to_csv(path, index=False)
 
 
-def write_tableau_directory(list_of_dfs):
-    tableau_path = _make_output_dir("module_progress-Tableau")
+def write_tableau_directory(COURSE_ID, list_of_dfs):
+    tableau_path = _make_output_dir(f"{COURSE_ID}/module_progress-Tableau")
     union = pd.concat(list_of_dfs, axis=0, ignore_index=True)
     module_data_output_path = tableau_path / "module_data.csv"
     union.to_csv(module_data_output_path, index=False)
-    src = Path(f"course_entitlements.csv")
-    dst = Path(f"data/module_progress-Tableau/course_entitlements.csv")
-    print(f"Module Progress: {src}, {dst}")
-    shutil.copyfile(src, dst)
+    #src = Path(f"course_entitlements.csv")
+    #dst = Path(f"data/module_progress-Tableau/course_entitlements.csv")
+    #print(f"Module Progress: {src}, {dst}")
+    #shutil.copyfile(src, dst)
     _output_status_table(tableau_path)
 
 def _make_output_dir(name):
