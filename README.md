@@ -29,7 +29,7 @@ You can now open the project folder in VSCode! (Open folder)
 
 ![alt text](img/vscode-open-folder.png)
 
-*Alternate: you can clone the github repo to keep the project in sync.*
+*Alternate: you can clone the github repo to keep the project in sync. This requires a github account and a few additional setup steps.*
 
 ## Environment Setup
 In terminal - enter the following commands:
@@ -80,7 +80,7 @@ How to get a Canvas API Token: https://community.canvaslms.com/t5/Canvas-Basics-
 
 ### Downloading New Analytics
 
-The project relies on a regular download of Canvas's Analytics data. On a regular basis, you should be downloading the New Analytics data - the scripts will prompt you to add the data to the correct folder when needed.
+The project relies on a regular download of Canvas's Analytics data. You should be downloading the data from canvas - the scripts will prompt you to add the data to the correct folder when needed.
 
 1. Navigate to Canvas Analytics -> `Reports`
 2. Select `Run Report` for Course Activity
