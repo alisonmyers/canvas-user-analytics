@@ -8,7 +8,7 @@ The project is a hybrid of Canvas Module Progress and Course Details projects. I
 
 ## Installation (Once)
 
-### VS Code: https://code.visualstudio.com/download 
+### 1. VS Code: https://code.visualstudio.com/download 
 
 Open VS Code, and open a new terminal:
 
@@ -18,10 +18,10 @@ in the following steps you'll use the terminal in VSCode
 
 ![alt text](img/vscode-terminal.png)
 
-### Homebrew: https://brew.sh/
-### Follow homebrew instructions to install `Git`: https://git-scm.com/downloads/mac
+### 2. Homebrew: https://brew.sh/
+### 3. Follow homebrew instructions to install `Git`: https://git-scm.com/downloads/mac
 
-### Download a copy of this project either via Zip or clone
+### 4. Download a copy of this project either via Zip or clone
 
 ![alt text](img/github-clone.png)
 
