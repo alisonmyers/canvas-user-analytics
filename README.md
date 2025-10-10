@@ -82,10 +82,12 @@ How to get a Canvas API Token: https://community.canvaslms.com/t5/Canvas-Basics-
 
 The project relies on a regular download of Canvas's Analytics data. You should be downloading the data from canvas - the scripts will prompt you to add the data to the correct folder when needed.
 
-1. Navigate to Canvas Analytics -> `Reports`
-2. Select `Run Report` for Course Activity
+1. Navigate to Canvas Analytics
+2. Then to Reports
+3. Select Course Activity Run Report
+4. Select `Run Report` in dialog
 
-![image](https://github.com/saud-learning-services/course-details/assets/22600917/186887df-b3d5-43d6-94d8-bd610d3c051e)
+![alt text](img/canvas-courseactivity-report.png)
 
 3. Save this activity file in `data/{COURSE_ID}/user_input/new_analytics_input/`
 
