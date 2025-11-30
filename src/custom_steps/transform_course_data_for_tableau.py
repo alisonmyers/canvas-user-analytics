@@ -85,8 +85,8 @@ def combine_enrollment_and_new_analytics_new():
         keepfiles = [None, "csv", "zip", "txt", "pdf"]  
         student_analytics['filetype'] = student_analytics["content_name"].apply(lambda x: _extract_file_type(x))
         student_analytics = student_analytics.query("`filetype` == @keepfiles")
-        output = student_analytics.drop(["global_user_id", "global_course_id"], axis=1)
-        output.to_csv(f'{TABLEAU_FOLDER}/student_analytics_new_noimages.csv', index=False)
+        #output = student_analytics.drop(["global_user_id", "global_course_id"], axis=1)
+        #output.to_csv(f'{TABLEAU_FOLDER}/student_analytics_new_noimages.csv', index=False)
 
         return(student_analytics)
         
