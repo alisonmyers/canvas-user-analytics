@@ -91,14 +91,16 @@ def get_user_settings():
         )
 
     course_names = __make_selected_courses_string(courses)
+    
     # if not admin:
-    options = ["Yes, run for all courses", "Nevermind, end process"]
-    title = "You have chosen to get Module Process: \n\n For: {} \n\n From: {}".format(
-        course_names, base_url
-    )
-    continue_confirm = pick(options, title)
+    # options = ["Yes, run for all courses", "Nevermind, end process"]
+    # title = "You have chosen to get Module Process: \n\n For: {} \n\n From: {}".format(
+    #     course_names, base_url
+    # )
+    # continue_confirm = pick(options, title)
 
-    if continue_confirm[1] == 0:
+    # if continue_confirm[1] == 0:
+    if True: 
         print(
             "Getting Module Progress: \n For: {} \n From: {}".format(
                 course_names, base_url

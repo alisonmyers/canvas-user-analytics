@@ -58,10 +58,10 @@ def write_data_directory(dataframes, cid):
 
 
 def write_tableau_directory(COURSE_ID, list_of_dfs):
-    tableau_path = _make_output_dir(f"{COURSE_ID}/module_progress-Tableau")
-    union = pd.concat(list_of_dfs, axis=0, ignore_index=True)
-    module_data_output_path = tableau_path / "module_data.csv"
-    union.to_csv(module_data_output_path, index=False)
+    #tableau_path = _make_output_dir(f"{COURSE_ID}/module_progress-Tableau")
+    #union = pd.concat(list_of_dfs, axis=0, ignore_index=True)
+    #module_data_output_path = tableau_path / "module_data.csv"
+    #union.to_csv(module_data_output_path, index=False)
     #src = Path(f"course_entitlements.csv")
     #dst = Path(f"data/module_progress-Tableau/course_entitlements.csv")
     #print(f"Module Progress: {src}, {dst}")

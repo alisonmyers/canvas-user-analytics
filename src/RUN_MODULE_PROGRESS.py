@@ -20,12 +20,10 @@ import pandas as pd
 import src.interface as interface
 import src.settings as settings
 from src.canvas_helpers import (
-    get_modules,
-    get_items,
     get_student_module_status,
     get_student_items_status,
 )
-from src.file_utils import (write_data_directory, write_tableau_directory)
+from src.file_utils import (write_data_directory)
 from src.logging_utils import (log_success, log_failure)
 
 pd.set_option("display.max_columns", 500)
@@ -53,8 +51,8 @@ def main():
 
         try:
             settings.status[str(cid)]["cname"] = course.name
-            modules_df = get_modules(course)
-            items_df = get_items(modules_df, course.name)
+            #modules_df = get_modules(course)
+            #items_df = get_items(modules_df, course.name)
             student_module_status = get_student_module_status(course)
             student_items_status = get_student_items_status(
                 course, student_module_status
@@ -71,24 +69,24 @@ def main():
             log_failure(cid, "Course must have students enrolled")
         except Exception as e:
             log_failure(cid, "Unexpected error: " + e)
+            print(e)
+            print("Shutting down...")
+            sys.exit()
         else:
             # Writing dataframes to disk
             dataframes = {
-                "module_df": modules_df,
-                "items_df": items_df,
-                "student_module_df": student_module_status,
+                #"module_df": modules_df,
+                #"items_df": items_df,
+                #"student_module_df": student_module_status,
                 "student_items_df": student_items_status,
             }
             tableau_dfs.append(student_items_status)
             write_data_directory(dataframes, cid)
             log_success(cid)
 
-    try:
-        write_tableau_directory(tableau_dfs)
-    except Exception as e:
-        print(e)
-        print("Shutting down...")
-        sys.exit()
+    # try:
+    #     write_tableau_directory(tableau_dfs)
+
 
     interface.render_status_table()
     print("\n\033[94m" + "***COMPLETED***" + "\033[91m")
