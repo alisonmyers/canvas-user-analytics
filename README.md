@@ -100,7 +100,7 @@ The project relies on a regular download of Canvas's Analytics data. You should 
 source .venv/bin/activate
 ```
 
-![alt text](README/image.png)
+![alt text](img/image.png)
 
 6. Run the script
 ```bash
