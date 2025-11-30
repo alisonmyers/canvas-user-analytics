@@ -13,3 +13,4 @@ mp_src/data/*
 mp_src/archive/*
 .venv/*
 .venv
+original_READMEs/*
