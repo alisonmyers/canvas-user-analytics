@@ -84,10 +84,6 @@ def main():
             write_data_directory(dataframes, cid)
             log_success(cid)
 
-    # try:
-    #     write_tableau_directory(tableau_dfs)
-
-
     interface.render_status_table()
     print("\n\033[94m" + "***COMPLETED***" + "\033[91m")
 
