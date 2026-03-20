@@ -80,7 +80,7 @@ How to get a Canvas API Token: https://community.canvaslms.com/t5/Canvas-Basics-
 
 ### Downloading the Gradebook
 
-You must do this at least once. If you want to keep this updated, you can replace the `gradebook.csv ` file whenever you would like the data updated. *You can choose to do this every time if required.
+You must do this at least once. If you want to keep this updated, you can replace the `gradebook.csv` file whenever you would like the data updated. *You can choose to do this every time if required.
 
 In Canvas navigate to the gradebook. Download the gradebook and save as `user_input/gradebook_input/gradebook.csv`.
 

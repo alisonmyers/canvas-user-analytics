@@ -73,14 +73,15 @@ def get_course_data(course, output_folder):
 
 def create_course_data():
     # establish canvas connection
+    file_utils.create_folder(settings.APIOUTPUT_FOLDER)
+    file_utils.create_folder(settings.NEWANALYTICS_NEW_FOLDER)
+    file_utils.create_folder(settings.GRADEBOOK_FOLDER) 
+
     canvas, auth_header = create_canvas_object()
     
     #create a project structure for the new course
     course = canvas.get_course(COURSE_ID)
-    
-    file_utils.create_folder(settings.APIOUTPUT_FOLDER)
-    file_utils.create_folder(settings.NEWANALYTICS_NEW_FOLDER)
-    file_utils.create_folder(settings.GRADEBOOK_FOLDER) 
+
 
     get_course_data(course, settings.APIOUTPUT_FOLDER)
     
