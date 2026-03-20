@@ -75,6 +75,19 @@ pip install -r requirements.txt
 
 How to get a Canvas API Token: https://community.canvaslms.com/t5/Canvas-Basics-Guide/How-do-I-manage-API-access-tokens-in-my-user-account/ta-p/615312
 
+## You'll need to run the script once first to create your data input folders
+
+```bash
+source .venv/bin/activate
+```
+
+![alt text](img/venv-example.png)
+
+6. Run the script
+```bash
+python3 -m run
+```
+
 
 ## Updating Data / Running the Script - You'll do this every* time.
 
